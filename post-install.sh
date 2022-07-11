@@ -9,6 +9,9 @@
 #Load AWS Parallelcluster environment variables
 . /etc/parallelcluster/cfnconfig
 
+#convert cfn_postinstall_args to list.
+cfn_postinstall_args=($cfn_postinstall_args)
+
 #get GitHub repo to clone and the installation script
 monitoring_url=${cfn_postinstall_args[0]}
 monitoring_dir_name=${cfn_postinstall_args[1]}
